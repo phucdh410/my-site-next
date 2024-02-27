@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import type { Swiper as SwiperType } from "swiper";
-import { Parallax } from "swiper/modules";
+import { Autoplay, Parallax } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { MNavigation } from "./MNavigation";
@@ -15,6 +15,7 @@ import img3 from "./test3.jpg";
 
 import "swiper/css";
 import "swiper/css/parallax";
+import "swiper/css/autoplay";
 import "./styles.scss";
 
 const DATA = [
@@ -76,7 +77,8 @@ export const MSwiper = () => {
           className="my-swiper"
           loop
           speed={700}
-          modules={[Parallax]}
+          modules={[Parallax, Autoplay]}
+          autoplay
           parallax
           initialSlide={activeSlideIndex}
           onSlideChange={onSlideChange}
