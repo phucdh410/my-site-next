@@ -3,8 +3,10 @@ import classNames from "classnames";
 import { useSwiper } from "swiper/react";
 
 export const MPagination = ({
+  length,
   activeSlideIndex,
 }: {
+  length: number;
   activeSlideIndex: number;
 }) => {
   //#region Data
@@ -27,7 +29,7 @@ export const MPagination = ({
       component="ul"
       zIndex={1}
     >
-      {Array(3)
+      {Array(length)
         .fill("")
         .map((sl, i) => (
           <li

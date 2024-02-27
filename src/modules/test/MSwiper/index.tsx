@@ -7,6 +7,7 @@ import type { Swiper as SwiperType } from "swiper";
 import { Parallax } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { MNavigation } from "./MNavigation";
 import { MPagination } from "./MPagination";
 import img1 from "./test1.jpg";
 import img2 from "./test2.jpg";
@@ -143,7 +144,11 @@ export const MSwiper = () => {
               )}
             </SwiperSlide>
           ))}
-          <MPagination activeSlideIndex={activeSlideIndex} />
+          <MPagination
+            length={DATA.length}
+            activeSlideIndex={activeSlideIndex}
+          />
+          <MNavigation />
         </Swiper>
         {/* <Stack
           top={16}

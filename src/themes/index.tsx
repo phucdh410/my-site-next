@@ -93,6 +93,12 @@ declare module "@mui/material/Button" {
     exampleCustomColor: true;
   }
 }
+declare module "@mui/material/IconButton" {
+  // eslint-disable-next-line unused-imports/no-unused-vars
+  interface IconButtonPropsColorOverrides {
+    exampleCustomColor: true;
+  }
+}
 //#endregion
 
 export default theme;
