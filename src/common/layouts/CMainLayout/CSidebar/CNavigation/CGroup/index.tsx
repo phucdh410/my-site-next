@@ -45,7 +45,7 @@ export const CGroup = ({ data }: { data: IGroupSidebar }) => {
       <Collapse in={open}>
         <Stack gap={0.5}>
           {data.children.map((child, index) => (
-            <CItem key={child.label + index + new Date()} data={child} />
+            <CItem key={child.id} data={child} />
           ))}
         </Stack>
       </Collapse>

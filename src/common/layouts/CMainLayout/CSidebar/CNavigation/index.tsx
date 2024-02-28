@@ -23,7 +23,7 @@ export const CNavigation = () => {
         value={{ groupOpen, setGroupOpen, childOpen, setChildOpen }}
       >
         {SIDEBAR.map((group, index) => (
-          <CGroup key={group.label + index + new Date()} data={group} />
+          <CGroup key={group.id} data={group} />
         ))}
       </SidebarContext.Provider>
     </Stack>
