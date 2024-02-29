@@ -37,6 +37,7 @@
           ["^.+\\.?(css)"]
         ]
       }
-    ]
+    ],
+    "react/display-name": "off"
   }
 }

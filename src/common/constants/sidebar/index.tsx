@@ -1,16 +1,15 @@
-import { faAppStore, faProductHunt } from "@fortawesome/free-brands-svg-icons";
 import {
-  faCalendarDays,
-  faComment,
-  faFolderOpen,
-  faUser,
-} from "@fortawesome/free-regular-svg-icons";
-import {
-  faBuildingColumns,
-  faChartLine,
-  faDumpster,
-  faPlane,
-} from "@fortawesome/free-solid-svg-icons";
+  AccountBalance,
+  CalendarMonth,
+  Chat,
+  Description,
+  Equalizer,
+  Group,
+  LocalMall,
+  ShoppingCart,
+  SpeedOutlined,
+  Style,
+} from "@mui/icons-material";
 
 import { ISidebar } from "@/types/sidebar";
 
@@ -23,42 +22,42 @@ export const SIDEBAR: ISidebar = [
         id: "App",
         label: "App",
         path: "/app",
-        icon: faAppStore,
+        icon: <SpeedOutlined />,
         children: false,
       },
       {
         id: "E-commerce",
         label: "E-Commerce",
         path: "/e-commerce",
-        icon: faDumpster,
+        icon: <LocalMall />,
         children: false,
       },
       {
         id: "Analytics",
         label: "Analytics",
         path: "/analytics",
-        icon: faChartLine,
+        icon: <Equalizer />,
         children: false,
       },
       {
         id: "Banking",
         label: "Banking",
         path: "/banking",
-        icon: faBuildingColumns,
+        icon: <AccountBalance />,
         children: false,
       },
       {
         id: "Booking",
         label: "Booking",
         path: "/booking",
-        icon: faPlane,
+        icon: <Style />,
         children: false,
       },
       {
         id: "File",
         label: "File",
         path: "/file",
-        icon: faFolderOpen,
+        icon: <Description />,
         children: false,
       },
     ],
@@ -71,7 +70,7 @@ export const SIDEBAR: ISidebar = [
         id: "User",
         label: "User",
         path: "/user",
-        icon: faUser,
+        icon: <Group />,
         children: [
           { label: "Profile", path: "/profile" },
           { label: "Cards", path: "/cards" },
@@ -83,7 +82,7 @@ export const SIDEBAR: ISidebar = [
         id: "Product",
         label: "Product",
         path: "/product",
-        icon: faProductHunt,
+        icon: <ShoppingCart />,
         children: [
           { label: "Profile", path: "/profile" },
           { label: "Cards", path: "/cards" },
@@ -95,7 +94,7 @@ export const SIDEBAR: ISidebar = [
         id: "Calendar",
         label: "Calendar",
         path: "/calendar",
-        icon: faCalendarDays,
+        icon: <CalendarMonth />,
         children: false,
       },
     ],
@@ -108,7 +107,7 @@ export const SIDEBAR: ISidebar = [
         id: "Chat",
         label: "Chat",
         path: "/chat",
-        icon: faComment,
+        icon: <Chat />,
         children: false,
       },
     ],

@@ -99,13 +99,7 @@ export const CItem = ({ data }: { data: ISidebarItem }) => {
         LinkComponent={Link}
         className="sidebar-collapse-item"
       >
-        <StyledListItemIcon>
-          <FontAwesomeIcon
-            className="sidebar-icon"
-            size="xl"
-            icon={data.icon}
-          />
-        </StyledListItemIcon>
+        <StyledListItemIcon>{data.icon}</StyledListItemIcon>
         <StyledListItemText>{data.label}</StyledListItemText>
         <FontAwesomeIcon
           className={classNames(open && "open", "sidebar-collapse-item--icon")}
@@ -129,13 +123,7 @@ export const CItem = ({ data }: { data: ISidebarItem }) => {
   ) : (
     <Link href={data.path} passHref>
       <StyledListItemButton selected={selected} LinkComponent={Link}>
-        <StyledListItemIcon>
-          <FontAwesomeIcon
-            className="sidebar-icon"
-            size="xl"
-            icon={data.icon}
-          />
-        </StyledListItemIcon>
+        <StyledListItemIcon>{data.icon}</StyledListItemIcon>
         <StyledListItemText>{data.label}</StyledListItemText>
       </StyledListItemButton>
     </Link>

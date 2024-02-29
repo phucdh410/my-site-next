@@ -1,5 +1,11 @@
+import { MUploadFile } from "@/modules/file";
+
 const FilePage = () => {
-  return <div>FilePage</div>;
+  return (
+    <>
+      <MUploadFile />
+    </>
+  );
 };
 
 export default FilePage;
