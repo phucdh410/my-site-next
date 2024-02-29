@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Protest+Riot&display=swap");
+//#region Font
+$font-montserrat: var(--font-montserrat);
+$font-raleway: var(--font-raleway);
+$font-quicksand: var(--font-quicksand);
+$font-public-sans: var(--font-public-sans);
+$font-protest-riot: "Protest Riot", sans-serif;
+$font-honk: "Honk", system-ui;
+//#endregion
+
+//#region Color
+$color-primary: rgba(18, 72, 116, 1);
+$color-secondary: rgba(207, 55, 61, 1);
+$color-warning: rgba(255, 197, 12, 1);
+$color-success: rgb(91, 228, 155);
+$color-black: rgba(51, 51, 51, 1);
+$color-light-black: rgba(110, 110, 110, 1);
+
+$color-sidebar-group: rgb(145, 158, 171);
+$color-sidebar-group-hover: rgb(33, 43, 54);
+$color-sidebar-item: rgb(99, 115, 129);
+$color-sidebar-item-selected: rgb(0, 167, 111);
+$color-sidebar-item-background-selected: rgba(0, 167, 111, 0.08);
+
+$color-calendar-purple-bg: rgb(126, 78, 229);
+$color-calendar-purple-bg-light: rgb(140 87 255 / 0.16);
+$color-calendar-purple-text: #8c57ff;
+
+$color-table-border-color: rgba(46, 38, 61, 0.12);
+//#endregion

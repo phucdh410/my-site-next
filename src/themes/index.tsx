@@ -13,22 +13,22 @@ let theme = createTheme({
       md: 900,
       lg: 1280,
       xl: 1366,
-      "2xl": 1536,
-      "3xl": 1680,
+      "2xl": 1440,
+      "3xl": 1600,
       "4xl": 1920,
     },
   },
   palette: {
     primary: {
-      main: "#124874",
+      main: "rgba(18, 72, 116, 1)",
       contrastText: "#ffffff",
     },
     secondary: {
-      main: "#CF373D",
+      main: "rgba(207, 55, 61, 1)",
       contrastText: "#ffffff",
     },
     warning: {
-      main: "#FFC50C",
+      main: "rgba(255, 197, 12, 1)",
       contrastText: "#ffffff",
     },
     success: {

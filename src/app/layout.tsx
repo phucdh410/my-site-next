@@ -7,10 +7,11 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { CMainLayout } from "@/common/layouts";
 import theme from "@/themes";
 
-import { comfortaa, montserrat, public_sans, quicksand, raleway } from "./font";
+import { montserrat, public_sans, quicksand, raleway } from "./font";
 
 import "@fortawesome/fontawesome-svg-core/styles.css"; //! 2. Cần dòng này fix lỗi icon quá to khi load của Nextjs
 import "./globals.css";
+import "../styles/index.scss";
 
 config.autoAddCss = false; //! 3. Cần dòng này fix lỗi icon quá to khi load của Nextjs
 
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${raleway.variable} ${montserrat.variable} ${quicksand.variable} ${comfortaa.variable} ${public_sans.variable}`}
+      className={`${raleway.variable} ${montserrat.variable} ${quicksand.variable} ${public_sans.variable}`}
     >
       <body>
         <AppRouterCacheProvider>

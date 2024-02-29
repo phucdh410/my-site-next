@@ -1,10 +1,4 @@
-import {
-  Comfortaa,
-  Montserrat,
-  Public_Sans,
-  Quicksand,
-  Raleway,
-} from "next/font/google";
+import { Montserrat, Public_Sans, Quicksand, Raleway } from "next/font/google";
 
 export const raleway = Raleway({
   subsets: ["latin"],
@@ -16,12 +10,6 @@ export const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-montserrat",
-});
-
-export const comfortaa = Comfortaa({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-comfortaa",
 });
 
 export const quicksand = Quicksand({

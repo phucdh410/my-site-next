@@ -29,7 +29,9 @@ export const CMainLayout: React.FC<PropsWithChildren> = ({ children }) => {
         <CSidebar open={open} />
         <Stack flex={1}>
           <Box height={HEADER_HEIGHT}>Header</Box>
-          <Box flex={1}>{children}</Box>
+          <Box flex={1} px={2} pt={2}>
+            {children}
+          </Box>
         </Stack>
       </Stack>
     </main>
