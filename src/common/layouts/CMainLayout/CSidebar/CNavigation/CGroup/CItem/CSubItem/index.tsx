@@ -5,13 +5,12 @@ import { useMemo } from "react";
 
 import { Box } from "@mui/material";
 
-import { ISidebarSubItem } from "@/types/sidebar";
-
 import {
-  StyledListItemButton,
-  StyledListItemIcon,
-  StyledListItemText,
-} from "..";
+  CSidebarItem,
+  CSidebarItemIcon,
+  CSidebarItemText,
+} from "@/common/layouts/CMainLayout/StyledComponent";
+import { ISidebarSubItem } from "@/types/sidebar";
 
 export const CSubItem = ({
   parentSlug,
@@ -31,17 +30,17 @@ export const CSubItem = ({
   //#region Render
   return (
     <Link href={parentSlug + data.path} passHref>
-      <StyledListItemButton selected={selected} LinkComponent={Link} divider>
-        <StyledListItemIcon>
+      <CSidebarItem selected={selected} LinkComponent={Link} divider>
+        <CSidebarItemIcon>
           <Box
             height={4}
             width={4}
             borderRadius="50%"
             sx={{ backgroundColor: "currentcolor", color: "currentcolor" }}
           ></Box>
-        </StyledListItemIcon>
-        <StyledListItemText>{data.label}</StyledListItemText>
-      </StyledListItemButton>
+        </CSidebarItemIcon>
+        <CSidebarItemText>{data.label}</CSidebarItemText>
+      </CSidebarItem>
     </Link>
   );
   //#endregion
