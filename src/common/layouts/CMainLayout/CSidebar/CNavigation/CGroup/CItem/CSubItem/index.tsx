@@ -9,7 +9,7 @@ import {
   CSidebarItem,
   CSidebarItemIcon,
   CSidebarItemText,
-} from "@/common/layouts/CMainLayout/StyledComponent";
+} from "@/styled-component/layouts";
 import { ISidebarSubItem } from "@/types/sidebar";
 
 export const CSubItem = ({

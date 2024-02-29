@@ -14,7 +14,7 @@ import {
   CSidebarItem,
   CSidebarItemIcon,
   CSidebarItemText,
-} from "@/common/layouts/CMainLayout/StyledComponent";
+} from "@/styled-component/layouts";
 import { ISidebarItem } from "@/types/sidebar";
 
 import { CSubItem } from "./CSubItem";

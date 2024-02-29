@@ -6,9 +6,9 @@ import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Box, Stack } from "@mui/material";
 
 import { HEADER_HEIGHT } from "@/common/constants/layout-size";
+import { ToggleSidebarButton } from "@/styled-component/layouts";
 
 import { CSidebar } from "./CSidebar";
-import { ToggleSidebarButton } from "./StyledComponent";
 
 export const CMainLayout: React.FC<PropsWithChildren> = ({ children }) => {
   //#region Data
