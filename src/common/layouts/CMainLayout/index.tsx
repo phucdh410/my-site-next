@@ -5,9 +5,9 @@ import { PropsWithChildren, useState } from "react";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Box, Stack } from "@mui/material";
 
-import { HEADER_HEIGHT } from "@/common/constants/layout-size";
 import { ToggleSidebarButton } from "@/styled-component/layouts";
 
+import { CHeader } from "./CHeader";
 import { CSidebar } from "./CSidebar";
 
 export const CMainLayout: React.FC<PropsWithChildren> = ({ children }) => {
@@ -28,7 +28,7 @@ export const CMainLayout: React.FC<PropsWithChildren> = ({ children }) => {
         </ToggleSidebarButton>
         <CSidebar open={open} />
         <Stack flex={1}>
-          <Box height={HEADER_HEIGHT}>Header</Box>
+          <CHeader />
           <Box flex={1} px={2} pt={2}>
             {children}
           </Box>

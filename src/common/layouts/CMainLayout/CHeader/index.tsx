@@ -1,11 +1,23 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
+
+import { HEADER_HEIGHT } from "@/common/constants/layout-size";
+
+import { CSearchBar } from "./CSearchBar";
+import { CToolbar } from "./CToolbar";
 
 export const CHeader = () => {
   return (
-    <Box p={3}>
-      <Stack>
-        <img src="/assets/mysite-logo.png" alt="My site logo" />
-        <Typography>ĐHP-410</Typography>
+    <Box height={HEADER_HEIGHT} bgcolor="white">
+      <Stack
+        height="100%"
+        direction="row"
+        px={3}
+        py={2}
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <CSearchBar />
+        <CToolbar />
       </Stack>
     </Box>
   );

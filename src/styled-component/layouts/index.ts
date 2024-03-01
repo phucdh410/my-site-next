@@ -7,6 +7,7 @@ import {
   ListItemIcon,
   ListItemText,
   styled,
+  TextField,
 } from "@mui/material";
 
 import { SIDEBAR_FULL, SIDEBAR_MINI } from "@/common/constants/layout-size";
@@ -15,14 +16,14 @@ import { SIDEBAR_FULL, SIDEBAR_MINI } from "@/common/constants/layout-size";
 const styleIn = (theme: Theme): CSSObject => ({
   width: SIDEBAR_FULL,
   transition: theme.transitions.create(["width"], {
-    easing: theme.transitions.easing.easeIn,
+    easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.enteringScreen,
   }),
 });
 const styleOut = (theme: Theme): CSSObject => ({
   width: SIDEBAR_MINI,
   transition: theme.transitions.create(["width"], {
-    easing: theme.transitions.easing.easeOut,
+    easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflowX: "hidden",
@@ -52,7 +53,7 @@ export const ToggleSidebarButton = styled(IconButton, {
 })<IStyledToggleButton>(
   ({ theme, open }): CSSObject => ({
     position: "absolute",
-    top: 50,
+    top: 67,
     ".MuiSvgIcon-root": {
       width: 16,
       height: 16,
@@ -67,13 +68,13 @@ export const ToggleSidebarButton = styled(IconButton, {
     ...(open
       ? {
           transition: theme.transitions.create(["left", "background-color"], {
-            easing: theme.transitions.easing.easeIn,
+            easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.enteringScreen,
           }),
         }
       : {
           transition: theme.transitions.create(["left"], {
-            easing: theme.transitions.easing.easeOut,
+            easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
           }),
         }),
@@ -130,5 +131,34 @@ export const CSidebarItemText = styled(ListItemText)(({ theme }) => ({
     overflow: "hidden",
     textOverflow: "ellipsis",
   },
+}));
+//#endregion
+
+//#region Search Bar
+export const CSearchBarField = styled(TextField)(({ theme }) => ({
+  ".MuiOutlinedInput-root": {
+    fontFamily: "var(--font-raleway)",
+    borderRadius: "12px",
+    width: 200,
+    transition: theme.transitions.create(["width"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.short,
+    }),
+
+    "&.Mui-focused": {
+      width: 600,
+    },
+
+    ".MuiOutlinedInput-input": {
+      paddingBlock: "10px",
+
+      "&::placeholder": {
+        color: "#333333",
+        fontWeight: 700,
+      },
+    },
+  },
+
+  ".MuiOutlinedInput-notchedOutline": {},
 }));
 //#endregion
