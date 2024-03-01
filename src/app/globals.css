@@ -1,3 +1,7 @@
+:root {
+  --bg-color: rgb(238, 242, 246);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,6 +13,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: var(--font-montserrat);
+  background-color: var(--bg-color);
 }
 
 main {
@@ -37,4 +42,18 @@ img {
   html {
     color-scheme: dark;
   }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #c3c3c3;
+  border-radius: 300px;
+}
+::-webkit-scrollbar-track {
+  background-color: #888888;
+  border: 3px solid var(--bg-color);
+  border-top-width: 0;
+  border-bottom-width: 0;
 }
