@@ -12,11 +12,19 @@ export const CHeader = () => {
         height="100%"
         direction="row"
         px={3}
-        py={2}
+        py={1}
         alignItems="center"
         justifyContent="space-between"
       >
         <CSearchBar />
+        <Stack direction="row">
+          <Box maxWidth={70}>
+            <img src="/assets/images/mysite.gif" alt="Funny gif" />
+          </Box>
+          <Box maxWidth={70}>
+            <img src="/assets/images/mysite-2.gif" alt="Funny gif" />
+          </Box>
+        </Stack>
         <CToolbar />
       </Stack>
     </Box>
