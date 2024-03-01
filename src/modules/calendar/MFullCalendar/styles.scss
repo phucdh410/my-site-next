@@ -3,6 +3,8 @@
 .fullcalendar-wrapper {
   .fc-media-screen {
     .fc-header-toolbar {
+      margin-bottom: 20px;
+
       .fc-toolbar-chunk:first-of-type {
         display: flex;
         align-items: center;
@@ -76,7 +78,7 @@
       border-color: $color-table-border-color;
       border-inline-width: 0px;
       a {
-        font-weight: 700;
+        font-weight: 600;
         font-size: 1rem;
         line-height: 1.4;
         padding: 0.5rem;
@@ -99,6 +101,55 @@
           color: $color-light-black;
           font-weight: 400;
           font-family: $font-protest-riot;
+        }
+      }
+
+      .fullcalendar-day-event {
+        padding-inline: 8px;
+        padding-block: 4px;
+        border-radius: 300px;
+        border: none;
+
+        --color-etc: 22, 177, 255;
+        --color-family: 255, 180, 0;
+        --color-holiday: 86, 202, 0;
+        --color-personal: 255, 76, 81;
+        --color-business: 140, 87, 255;
+
+        &:has(.fullcalendar-event-text.business) {
+          background-color: rgba(var(--color-business), 20%);
+          color: rgb(var(--color-business));
+        }
+        &:has(.fullcalendar-event-text.holiday) {
+          background-color: rgba(var(--color-holiday), 20%);
+          color: rgb(var(--color-holiday));
+        }
+        &:has(.fullcalendar-event-text.personal) {
+          background-color: rgba(var(--color-personal), 20%);
+          color: rgb(var(--color-personal));
+        }
+        &:has(.fullcalendar-event-text.family) {
+          background-color: rgba(var(--color-family), 20%);
+          color: rgb(var(--color-family));
+        }
+        &:has(.fullcalendar-event-text.etc) {
+          background-color: rgba(var(--color-etc), 20%);
+          color: rgb(var(--color-etc));
+        }
+
+        .fullcalendar-event-text {
+          font-weight: 600;
+          line-height: 1.25;
+          font-family: $font-montserrat;
+        }
+
+        .fc-event-main {
+          color: unset;
+        }
+
+        p {
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
     }

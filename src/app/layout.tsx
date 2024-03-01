@@ -5,6 +5,7 @@ import { ThemeProvider } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 
 import { CMainLayout } from "@/common/layouts";
+import { CLocalizationProvider } from "@/common/others";
 import theme from "@/themes";
 
 import { montserrat, public_sans, quicksand, raleway } from "./font";
@@ -33,7 +34,9 @@ export default function RootLayout({
       <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
-            <CMainLayout>{children}</CMainLayout>
+            <CLocalizationProvider>
+              <CMainLayout>{children}</CMainLayout>
+            </CLocalizationProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

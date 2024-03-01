@@ -1,0 +1,37 @@
+@import "../../../styles/variables";
+
+.sidebar-calendar {
+  .MuiDayCalendar-header {
+    .MuiTypography-root {
+      font-family: $font-public-sans;
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+  }
+
+  .MuiPickersDay-root {
+    font-family: $font-public-sans;
+    font-weight: 400;
+    font-size: 0.8rem;
+
+    &.MuiPickersDay-today {
+      border-color: $color-calendar-purple-text;
+      background-color: $color-calendar-purple-bg-light;
+      color: $color-calendar-purple-text;
+    }
+
+    &:hover {
+      background-color: rgb(101 2 185 / 20%);
+    }
+
+    &.Mui-selected,
+    &:focus.Mui-selected {
+      color: rgb(140, 87, 255);
+      background-color: rgb(237, 228, 255);
+
+      &:hover {
+        background-color: rgb(101 2 185 / 20%);
+      }
+    }
+  }
+}

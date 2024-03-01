@@ -1,18 +1,23 @@
-import { Container, Paper, Stack } from "@mui/material";
+import { Container, Divider, Paper, Stack } from "@mui/material";
 
-import { MFullCalendar } from "@/modules/calendar";
+import { MFullCalendar, MSidebarCalendar } from "@/modules/calendar";
 
 const CalendarPage = () => {
   return (
     <Container maxWidth="2xl">
-      <Paper>
-        <Stack direction="row" width="100%">
-          <Stack width={280} flexShrink={0}>
-            Calendar and filter
-          </Stack>
-          <Stack flex={1}>
-            <MFullCalendar />
-          </Stack>
+      <Paper
+        sx={{
+          boxShadow: "0px 4px 10px rgb( 46 38 61 / 0.2)",
+        }}
+      >
+        <Stack
+          direction="row"
+          width="100%"
+          mb={10}
+          divider={<Divider orientation="vertical" flexItem />}
+        >
+          <MSidebarCalendar />
+          <MFullCalendar />
         </Stack>
       </Paper>
     </Container>
