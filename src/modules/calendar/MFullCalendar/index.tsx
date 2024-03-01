@@ -24,11 +24,13 @@ const events = [
   {
     title: "Prepare documents",
     start: dayjs().set("date", 4).toDate(),
+    end: dayjs().set("date", 5).toDate(),
     type: "business",
   },
   {
     title: "Sport Tour Event",
-    start: dayjs().set("date", 14).toDate(),
+    start: dayjs().set("date", 13).toDate(),
+    end: dayjs().set("date", 15).toDate(),
     type: "holiday",
   },
   {
@@ -55,7 +57,7 @@ const events = [
   {
     title: "Family play games",
     start: dayjs().set("date", 23).toDate(),
-    end: dayjs().set("date", 23).add(2, "day").toDate(),
+    end: dayjs().set("date", 25).toDate(),
     type: "family",
   },
   {
