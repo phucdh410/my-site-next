@@ -1,5 +1,7 @@
 :root {
   --bg-color: rgb(238, 242, 246);
+  --font-protest-riot: "Protest Riot", sans-serif;
+  --font-honk: "Honk", system-ui;
 }
 
 * {
