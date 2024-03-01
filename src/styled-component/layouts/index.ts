@@ -34,6 +34,9 @@ export const CDrawer = styled(Drawer, {
   ...(open ? { ...styleIn(theme) } : { ...styleOut(theme) }),
 
   ".MuiPaper-root.MuiDrawer-paper": {
+    boxShadow: "2px 0 6px 2px rgb(0 0 0 / 6%)",
+    borderRight: "none",
+
     ...(open ? { ...styleIn(theme) } : { ...styleOut(theme) }),
   },
 }));
@@ -57,10 +60,13 @@ export const ToggleSidebarButton = styled(IconButton, {
     left: open ? SIDEBAR_FULL - 14 : SIDEBAR_MINI - 14, // Lấy width của icon button trên UI chia 2 => 8
     zIndex: theme.zIndex.drawer + 1,
     backgroundColor: "white",
-    border: "1px dashed black",
+    filter: "drop-shadow(0px 0px 2px rgb(0 0 0 / 18%))",
+    "&:hover": {
+      backgroundColor: "rgb(244 238 255)",
+    },
     ...(open
       ? {
-          transition: theme.transitions.create(["left"], {
+          transition: theme.transitions.create(["left", "background-color"], {
             easing: theme.transitions.easing.easeIn,
             duration: theme.transitions.duration.enteringScreen,
           }),
