@@ -3,9 +3,10 @@
 import { Box, Stack, Typography } from "@mui/material";
 
 import { HEADER_HEIGHT } from "@/common/constants/layout-size";
-import { CDrawer } from "@/styled-component/layouts";
+import { CDrawer } from "@/styled-component/layouts/drawer";
 
 import { CNavigation } from "./CNavigation";
+import { CNavigationMini } from "./CNavigationMini";
 
 export const CSidebar = ({ open }: { open: boolean }) => {
   //#region Data
@@ -18,11 +19,12 @@ export const CSidebar = ({ open }: { open: boolean }) => {
   return (
     <CDrawer variant="permanent" open={open}>
       <Box height={HEADER_HEIGHT} p={1}>
-        <Stack direction="row" alignItems="center" gap={1}>
+        <Stack direction="row" alignItems="center" gap={1.25}>
           <Box
+            flexShrink={0}
             position="relative"
-            minWidth={85}
-            sx={{ aspectRatio: "559/447" }}
+            width={open ? 85 : 70}
+            sx={{ aspectRatio: "559/447", transition: "250ms all linear" }}
           >
             <img
               src="/assets/images/mysite-logo.png"
@@ -39,7 +41,7 @@ export const CSidebar = ({ open }: { open: boolean }) => {
         </Stack>
       </Box>
 
-      <CNavigation />
+      {open ? <CNavigation /> : <CNavigationMini />}
     </CDrawer>
   );
   //#endregion

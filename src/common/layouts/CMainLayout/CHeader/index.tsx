@@ -7,24 +7,23 @@ import { CToolbar } from "./CToolbar";
 
 export const CHeader = () => {
   return (
-    <Box height={HEADER_HEIGHT} bgcolor="white">
+    <Box
+      height={HEADER_HEIGHT}
+      bgcolor="white"
+      zIndex={1}
+      boxShadow="0 1px 10px 0px rgb(0 0 0 / 10%)"
+    >
       <Stack
         height="100%"
         direction="row"
+        flexShrink={0}
         px={3}
         py={1}
         alignItems="center"
         justifyContent="space-between"
       >
         <CSearchBar />
-        <Stack direction="row">
-          <Box maxWidth={70}>
-            <img src="/assets/images/mysite.gif" alt="Funny gif" />
-          </Box>
-          <Box maxWidth={70}>
-            <img src="/assets/images/mysite-2.gif" alt="Funny gif" />
-          </Box>
-        </Stack>
+
         <CToolbar />
       </Stack>
     </Box>

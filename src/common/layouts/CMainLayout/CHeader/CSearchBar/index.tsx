@@ -2,7 +2,7 @@ import { Search } from "@mui/icons-material";
 import { InputAdornment, Stack, Typography } from "@mui/material";
 
 import { SEARCH_TEXT } from "@/common/constants/search-text";
-import { CSearchBarField } from "@/styled-component/layouts";
+import { CSearchBarField } from "@/styled-component/layouts/searchbar";
 
 export const CSearchBar = () => {
   return (

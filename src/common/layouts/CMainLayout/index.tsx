@@ -5,7 +5,7 @@ import { PropsWithChildren, useState } from "react";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Box, Stack } from "@mui/material";
 
-import { ToggleSidebarButton } from "@/styled-component/layouts";
+import { ToggleSidebarButton } from "@/styled-component/layouts/drawer";
 
 import { CHeader } from "./CHeader";
 import { CSidebar } from "./CSidebar";
@@ -27,9 +27,9 @@ export const CMainLayout: React.FC<PropsWithChildren> = ({ children }) => {
           {open ? <ChevronLeft /> : <ChevronRight />}
         </ToggleSidebarButton>
         <CSidebar open={open} />
-        <Stack flex={1}>
+        <Stack maxHeight="100vh" overflow="hidden" flex={1}>
           <CHeader />
-          <Box flex={1} px={2} pt={2}>
+          <Box flex={1} px={2} pt={2} overflow="auto">
             {children}
           </Box>
         </Stack>
