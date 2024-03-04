@@ -3,7 +3,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 
 import { HEADER_HEIGHT } from "@/common/constants/layout-size";
-import { CDrawer } from "@/styled-component/layouts/drawer";
+import { CDrawer } from "@/styled/layouts/drawer";
 
 import { CNavigation } from "./CNavigation";
 import { CNavigationMini } from "./CNavigationMini";

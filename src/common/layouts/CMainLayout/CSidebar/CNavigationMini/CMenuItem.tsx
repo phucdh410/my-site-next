@@ -5,7 +5,7 @@ import {
   CSidebarItemIconMobile,
   CSidebarItemMobile,
   CSidebarItemTextMobile,
-} from "@/styled-component/layouts/sidebar/mobile";
+} from "@/styled/layouts/sidebar/mobile";
 import { ISidebarItem } from "@/types/sidebar";
 
 export const CMenuItem = ({ data }: { data: ISidebarItem }) => {

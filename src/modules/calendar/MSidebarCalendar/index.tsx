@@ -16,7 +16,7 @@ import { EVENT_TYPES } from "@/common/constants/options";
 import {
   MCalendarFilterCheckbox,
   MCalendarFilterLabel,
-} from "@/styled-component/calendars";
+} from "@/styled/calendars";
 import { TEvents } from "@/types/calendar";
 
 import "./styles.scss";
