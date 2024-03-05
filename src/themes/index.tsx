@@ -83,6 +83,10 @@ let theme = createTheme({
       main: "rgb(22, 177, 255)",
       contrastText: "#ffffff",
     },
+    icon: {
+      main: "rgb(144 156 165)",
+      contrastText: "#ffffff",
+    },
   },
   typography: {
     fontFamily: "var(--font-montserrat)",
@@ -102,6 +106,18 @@ theme = createTheme(theme, {
         root: {
           textTransform: "none",
         },
+      },
+    },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: {
+          color: theme.palette.icon.main,
+        },
+      },
+    },
+    MuiIconButton: {
+      defaultProps: {
+        color: "icon",
       },
     },
   } as Components<Omit<Theme, "components">>,
@@ -137,6 +153,7 @@ declare module "@mui/material/styles" {
     event_personal: Palette["primary"];
     event_family: Palette["primary"];
     event_etc: Palette["primary"];
+    icon: Palette["primary"];
   }
 
   interface PaletteOptions {
@@ -154,6 +171,7 @@ declare module "@mui/material/styles" {
     event_holiday?: PaletteOptions["primary"];
     event_personal?: PaletteOptions["primary"];
     event_etc?: PaletteOptions["primary"];
+    icon?: PaletteOptions["primary"];
   }
 }
 
@@ -174,6 +192,7 @@ declare module "@mui/material/Button" {
     event_holiday: true;
     event_personal: true;
     event_etc: true;
+    icon: true;
   }
 }
 declare module "@mui/material/IconButton" {
@@ -193,6 +212,7 @@ declare module "@mui/material/IconButton" {
     event_holiday: true;
     event_personal: true;
     event_etc: true;
+    icon: true;
   }
 }
 //#endregion
