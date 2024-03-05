@@ -13,9 +13,9 @@ let theme = createTheme({
       md: 900,
       lg: 1280,
       xl: 1366,
-      "2xl": 1440,
-      "3xl": 1600,
-      "4xl": 1920,
+      _2xl: 1440,
+      _3xl: 1600,
+      _4xl: 1920,
     },
   },
   palette: {
@@ -133,9 +133,9 @@ declare module "@mui/material/styles" {
     md: true;
     lg: true;
     xl: true;
-    "2xl": true;
-    "3xl": true;
-    "4xl": true;
+    _2xl: true;
+    _3xl: true;
+    _4xl: true;
   }
 
   interface Palette {
