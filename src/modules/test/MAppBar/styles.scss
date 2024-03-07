@@ -1,0 +1,51 @@
+.appbar-nav {
+  overflow-x: clip;
+  overflow-y: visible;
+
+  .appbar-overlay {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    transition: all 200ms ease-in-out;
+
+    &.left-side {
+      border-top-right-radius: 24px;
+    }
+
+    &.right-side {
+      border-top-left-radius: 24px;
+    }
+
+    &.center-side {
+      width: 40px;
+      mask-image: url("/assets/images/others/mask.png");
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: bottom;
+    }
+
+    @for $i from 1 to 6 {
+      &.current-#{$i} {
+        &.left-side {
+          right: calc(((5 - $i) + 1) * 40px);
+        }
+        &.right-side {
+          left: calc($i * 40px);
+        }
+        &.center-side {
+          left: calc(($i - 1) * 40px);
+        }
+      }
+    }
+  }
+
+  .appbar-item {
+    transition: all 200ms 50ms ease-in-out;
+    bottom: 0;
+    &.active {
+      bottom: 15px;
+    }
+  }
+}

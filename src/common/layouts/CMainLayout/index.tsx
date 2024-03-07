@@ -27,9 +27,12 @@ export const CMainLayout: React.FC<PropsWithChildren> = ({ children }) => {
         <ToggleSidebarButton onClick={toggleSidebar} size="small" open={open}>
           {open ? <ChevronLeft /> : <ChevronRight />}
         </ToggleSidebarButton>
+
         <CSidebar open={open} />
-        <Stack maxHeight="100vh" flex={1} overflow="hidden">
+
+        <Stack maxHeight="100vh" position="relative" flex={1} overflow="hidden">
           <CHeader />
+
           <CSmoothScrollbar>
             <Box flex={1} px={2} pt={2} overflow="auto">
               {children}
