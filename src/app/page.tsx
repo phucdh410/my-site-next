@@ -1,10 +1,10 @@
-import { MAppBar } from "@/modules/test";
+import { MTypingText } from "@/modules/test/MTypingText";
 
 export default function Home() {
   return (
     <>
       Content
-      <MAppBar />
+      <MTypingText />
     </>
   );
 }
