@@ -1,10 +1,10 @@
-import { MTypingText } from "@/modules/test/MTypingText";
+import { MConfirm } from "@/modules/test/MConfirm";
 
 export default function Home() {
   return (
     <>
       Content
-      <MTypingText />
+      <MConfirm />
     </>
   );
 }

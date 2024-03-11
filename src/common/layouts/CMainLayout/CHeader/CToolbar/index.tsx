@@ -28,7 +28,7 @@ export const CToolbar = () => {
           variant="circular"
           sx={{ border: "2px solid white", height: 36, width: 36 }}
         >
-          <img src={AVATAR_IMAGES[Math.floor(Math.random() * 20)]} alt="" />
+          <img src={AVATAR_IMAGES[9]} alt="" />
         </Avatar>
       </ButtonBase>
     </Stack>

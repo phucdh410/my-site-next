@@ -34,7 +34,13 @@ export const CMainLayout: React.FC<PropsWithChildren> = ({ children }) => {
           <CHeader />
 
           <CSmoothScrollbar>
-            <Box flex={1} px={2} pt={2} overflow="auto">
+            <Box
+              flex={1}
+              px={2}
+              pt={2}
+              overflow="auto"
+              className="main-content-wrapper"
+            >
               {children}
             </Box>
           </CSmoothScrollbar>
