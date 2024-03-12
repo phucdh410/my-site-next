@@ -1,11 +1,12 @@
 "use client";
 
-import { PropsWithChildren, useState } from "react";
+import { PropsWithChildren, useRef, useState } from "react";
 
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Box, Stack } from "@mui/material";
 
-import { CSmoothScrollbar } from "@/common/others";
+import { CContextMenu, CSmoothScrollbar } from "@/common/others";
+import { ICContextMenuRef } from "@/common/others/CContextMenu/types";
 import { ToggleSidebarButton } from "@/styled/layouts/drawer";
 
 import { CHeader } from "./CHeader";
@@ -13,16 +14,26 @@ import { CSidebar } from "./CSidebar";
 
 export const CMainLayout: React.FC<PropsWithChildren> = ({ children }) => {
   //#region Data
+  const contextRef = useRef<null | ICContextMenuRef>(null);
+
   const [open, setOpen] = useState<boolean>(true);
   //#endregion
 
   //#region Event
   const toggleSidebar = () => setOpen(!open);
+
+  const onContextMenu = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    event.preventDefault();
+
+    contextRef.current?.updatePos(event.clientX, event.clientY);
+  };
   //#endregion
 
   //#region Render
   return (
-    <main>
+    <main onContextMenu={onContextMenu}>
       <Stack direction="row" flex={1} position="relative">
         <ToggleSidebarButton onClick={toggleSidebar} size="small" open={open}>
           {open ? <ChevronLeft /> : <ChevronRight />}
@@ -46,6 +57,8 @@ export const CMainLayout: React.FC<PropsWithChildren> = ({ children }) => {
           </CSmoothScrollbar>
         </Stack>
       </Stack>
+
+      <CContextMenu ref={contextRef} />
     </main>
   );
   //#endregion
