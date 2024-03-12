@@ -39,10 +39,11 @@ const CConfirm: ConfirmType<ICConfirm, any> = ({
       TransitionComponent={Zoom}
     >
       <Paper>
-        <Stack p={3} alignItems="center" spacing={2}>
+        <Stack p={3} alignItems="center">
           <ErrorOutline className="dialog-icon" />
 
           <Typography
+            mt={1.5}
             fontSize={24}
             fontFamily="var(--font-raleway)"
             fontWeight={600}
@@ -51,11 +52,17 @@ const CConfirm: ConfirmType<ICConfirm, any> = ({
             {title ? title : "Confirm?"}
           </Typography>
 
-          <Typography className="dialog-content">
+          <Typography
+            mt={0.5}
+            fontSize={18}
+            fontFamily="var(--font-quicksand)"
+            fontWeight={500}
+            className="dialog-content"
+          >
             {content ? content : "Are you sure to do this action?"}
           </Typography>
 
-          <Stack direction="row" alignItems="center" gap={2}>
+          <Stack mt={2.5} direction="row" alignItems="center" gap={2}>
             <ConfirmButton
               variant="outlined"
               className="cancel-button"

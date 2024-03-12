@@ -15,6 +15,7 @@ export const ConfirmDialog = styled(Dialog)(({ theme }) => ({
 }));
 
 export const ConfirmButton = styled(Button)(({ theme }) => ({
+  minWidth: 100,
   borderRadius: "12px",
   boxShadow: "none",
   textTransform: "none",
