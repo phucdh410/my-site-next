@@ -1,8 +1,8 @@
 "use client";
-// import type {} from "@mui/x-data-grid/themeAugmentation"; //TODO bỏ comment nếu có sử dụng MUI-DataGrid
-// import type {} from "@mui/x-date-pickers/themeAugmentation"; //TODO bỏ comment nếu có sử dụng MUI-X-Date-Pickers
 
+// import type {} from "@mui/x-date-pickers/themeAugmentation"; //TODO bỏ comment nếu có sử dụng MUI-X-Date-Pickers
 import { Components, createTheme, Theme } from "@mui/material";
+import type {} from "@mui/x-data-grid/themeAugmentation"; //TODO bỏ comment nếu có sử dụng MUI-DataGrid
 
 //#region Breakpoints & Palette & Typography
 let theme = createTheme({

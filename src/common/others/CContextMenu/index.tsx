@@ -10,7 +10,6 @@ import { ICContextMenuRef, IContextPosition } from "./types";
 export const CContextMenu = forwardRef<ICContextMenuRef, any>((props, ref) => {
   //#region Data
   const [contextPos, setContextPos] = useState<IContextPosition | null>(null);
-  console.log("🚀 ~ CContextMenu ~ contextPos:", contextPos);
   //#endregion
 
   //#region Event

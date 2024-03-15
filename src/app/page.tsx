@@ -1,10 +1,10 @@
-import { MConfirm } from "@/modules/test/MConfirm";
+import { MDataTable } from "@/modules/test";
 
 export default function Home() {
   return (
     <>
       Content
-      <MConfirm />
+      <MDataTable />
     </>
   );
 }

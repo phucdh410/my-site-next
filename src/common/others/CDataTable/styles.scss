@@ -1,0 +1,14 @@
+.c-datatable {
+  background: white;
+
+  &.MuiDataGrid-root {
+    .MuiDataGrid-cell,
+    .MuiDataGrid-columnHeader {
+      &:focus,
+      &:focus-visible,
+      &:focus-within {
+        outline: none;
+      }
+    }
+  }
+}
