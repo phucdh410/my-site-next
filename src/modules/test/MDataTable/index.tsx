@@ -7,7 +7,9 @@ import { GridRowsProp, GridValueFormatterParams } from "@mui/x-data-grid";
 import { CDataTable } from "@/common/others";
 import { ICDataTableColumns } from "@/common/others/CDataTable/types";
 
-type IUser = {
+import { data } from "./mock";
+
+export type IUser = {
   id: number | string;
   name: string;
   major: string;
@@ -78,48 +80,7 @@ export const MDataTable = () => {
     { field: "address", headerName: "Địa chỉ", flex: 1, minWidth: 150 },
   ];
 
-  const rows: GridRowsProp<IUser> = [
-    {
-      id: 1,
-      name: "Đặng Hoàng Phúc",
-      major: "Frontend Developer",
-      address: "Ốc đảo Bình Chánh",
-      gender: true,
-      salary: 5000000,
-    },
-    {
-      id: 2,
-      name: "Lê Khánh Phương",
-      major: "Right Arm of VTCODE & PPA Smart",
-      address: "KĐT Sala",
-      gender: true,
-      salary: 30000000,
-    },
-    {
-      id: 3,
-      name: "Trần Nguyên Khánh",
-      major: "Backend Developer",
-      address: "Cư dân xóm ngập Q8",
-      gender: true,
-      salary: 15000000,
-    },
-    {
-      id: 4,
-      name: "Phạm Anh Dũng",
-      major: "Mobile Developer",
-      address: "Dân ở xa cô đơn Gò Vấp",
-      gender: true,
-      salary: 20000000,
-    },
-    {
-      id: 5,
-      name: "Trần Thị Ngọc Thùy",
-      major: "Website Developer",
-      address: "Kho trung chuyển Shopee",
-      gender: false,
-      salary: 20000000,
-    },
-  ];
+  const rows: GridRowsProp<IUser> = data;
   //#endregion
 
   //#region Event
@@ -127,7 +88,7 @@ export const MDataTable = () => {
 
   //#region Render
   return (
-    <Stack my={10}>
+    <Stack mb={20}>
       <CDataTable columns={columns} rows={rows} />
     </Stack>
   );
