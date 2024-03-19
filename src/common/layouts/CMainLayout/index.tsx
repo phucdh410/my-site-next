@@ -4,9 +4,8 @@ import { PropsWithChildren, useRef, useState } from "react";
 
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Box, Stack } from "@mui/material";
-import { SnackbarProvider } from "notistack";
 
-import { CContextMenu, CNoti, CSmoothScrollbar } from "@/common/others";
+import { CContextMenu, CNotiProvider, CSmoothScrollbar } from "@/common/others";
 import { ICContextMenuRef } from "@/common/others/CContextMenu/types";
 import { ToggleSidebarButton } from "@/styled/layouts/drawer";
 
@@ -59,11 +58,7 @@ export const CMainLayout: React.FC<PropsWithChildren> = ({ children }) => {
         </Stack>
       </Stack>
 
-      <SnackbarProvider
-        Components={{
-          success: CNoti,
-        }}
-      />
+      <CNotiProvider />
       <CContextMenu ref={contextRef} />
     </main>
   );
